@@ -1,3 +1,5 @@
+<img src="assets/banner.png" alt="ai-coding-agent-governance: Roll out coding agents with budgets, model control and logs." width="100%">
+
 # ai-coding-agent-governance
 
 [![skills.sh](https://skills.sh/b/build-with-ai-hq/ai-coding-agent-governance)](https://skills.sh/build-with-ai-hq/ai-coding-agent-governance)

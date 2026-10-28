@@ -320,3 +320,16 @@ If a browser-based client fails with CORS errors, add its headers to Bifrost's A
 1. Run one short task in the agent.
 2. Open `<gw>/logs` and confirm the request is there with the developer's virtual key, the expected provider and model.
 3. Switch the agent to a model the key does not allow and confirm a `403`-style rejection rather than a silent fallback.
+
+## CI: GitHub Actions example
+
+One virtual key per pipeline, stored as a CI secret, with tools restricted explicitly:
+
+```yaml
+# GitHub Actions step (sketch)
+- name: Agent review
+  env:
+    ANTHROPIC_BASE_URL: https://bifrost.internal.example.com/anthropic
+    ANTHROPIC_AUTH_TOKEN: ${{ secrets.BIFROST_VK_CI_REVIEW }}
+  run: claude -p "Review the diff in this PR for correctness issues" --allowedTools "Read,Grep,Glob"
+```

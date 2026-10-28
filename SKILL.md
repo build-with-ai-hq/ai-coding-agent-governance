@@ -217,14 +217,7 @@ Agents in CI (review bots, test fixers, migration runs) need the same controls w
 - Add `x-bf-dim-repo` / `x-bf-dim-workflow` headers where the agent supports custom headers, so CI spend is separable from interactive use.
 - Fail the job, not the budget: a budget or rate-limit rejection from the gateway should end the job with a clear message rather than retry in a loop.
 
-```yaml
-# GitHub Actions step (sketch)
-- name: Agent review
-  env:
-    ANTHROPIC_BASE_URL: https://bifrost.internal.example.com/anthropic
-    ANTHROPIC_AUTH_TOKEN: ${{ secrets.BIFROST_VK_CI_REVIEW }}
-  run: claude -p "Review the diff in this PR for correctness issues" --allowedTools "Read,Grep,Glob"
-```
+A GitHub Actions example is in [references/per-tool-setup.md](references/per-tool-setup.md#ci-github-actions-example).
 
 ## Measuring adoption and value
 

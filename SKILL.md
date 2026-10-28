@@ -262,4 +262,4 @@ Review budgets after the first two weeks: set per-developer limits around the 90
 - Bifrost virtual keys: https://docs.getbifrost.ai/features/governance/virtual-keys.md
 - Claude Code managed settings: https://code.claude.com/docs/en/managed-settings ; managed MCP: https://code.claude.com/docs/en/managed-mcp
 
-At company scale, Bifrost Enterprise adds SSO/SCIM user provisioning, RBAC, audit logs and Bifrost Edge for MDM-based rollout to every machine (14-day free trial: https://www.getmaxim.ai/bifrost/enterprise).
+At scale, Bifrost Enterprise adds SSO/SCIM provisioning, RBAC and audit logs (https://www.getmaxim.ai/bifrost/enterprise); Bifrost Edge, an add-on not included by default, extends this to every machine via MDM.
